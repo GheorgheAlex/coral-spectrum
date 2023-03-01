@@ -111,7 +111,6 @@ const MasonryItem = Decorator(class extends BaseComponent(HTMLElement) {
       this._reflectAttribute('selected', value);
       this.trigger('coral-masonry-item:_selecteditemchanged');
 
-      this.setAttribute('aria-selected', value);
       this.classList.toggle('is-selected', value);
 
       this._elements.check[value ? 'setAttribute' : 'removeAttribute']('checked', '');

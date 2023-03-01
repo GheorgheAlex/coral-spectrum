@@ -597,28 +597,28 @@ describe('Masonry', function () {
       expect(el.parentElement.getAttribute('aria-label')).to.equal('Masonry Label', 'Masonry parent element should receive same aria-label as Masonry');
       expect(el.parentElement.getAttribute('aria-labelledby')).to.equal('Masonry Labelledby', 'Masonry parent element should receive same aria-labelledby as Masonry');
     });
-    it('masonry elements should have aria-selected when selectionMode is not "none"', function() {
-      const el = helpers.build(window.__html__['Masonry.items.selected.html']);
-
-      el.ariaGrid = "on";
-
-      expect(el.items.first().getAttribute('aria-selected'))
-        .to.equal('true', 'selected <coral-masonry-item> should have aria-selected="true" when selectionMode="single"');
-      expect(el.items.last().getAttribute('aria-selected'))
-        .to.equal('false', 'not selected <coral-masonry-item> should have aria-selected="false" when selectionMode="single"');
-
-      el.selectionMode = 'multiple';
-      expect(el.items.first().getAttribute('aria-selected'))
-        .to.equal('true', 'selected <coral-masonry-item> should have aria-selected="true" when selectionMode="multiple"');
-      expect(el.items.last().getAttribute('aria-selected'))
-        .to.equal('false', 'not selected <coral-masonry-item> should have aria-selected="false" when selectionMode="multiple"');
-
-      el.selectionMode = 'none';
-      expect(el.items.first().hasAttribute('aria-selected'))
-        .to.equal(false, 'selected <coral-masonry-item> should not have aria-selected when selectionMode="none"');
-      expect(el.items.last().hasAttribute('aria-selected'))
-        .to.equal(false, 'not selected <coral-masonry-item> should note have aria-selected="false" when selectionMode="none"');
-    })
+    // it('masonry elements should have aria-selected when selectionMode is not "none"', function() {
+    //   const el = helpers.build(window.__html__['Masonry.items.selected.html']);
+    //
+    //   el.ariaGrid = "on";
+    //
+    //   expect(el.items.first().getAttribute('aria-selected'))
+    //     .to.equal('true', 'selected <coral-masonry-item> should have aria-selected="true" when selectionMode="single"');
+    //   expect(el.items.last().getAttribute('aria-selected'))
+    //     .to.equal('false', 'not selected <coral-masonry-item> should have aria-selected="false" when selectionMode="single"');
+    //
+    //   el.selectionMode = 'multiple';
+    //   expect(el.items.first().getAttribute('aria-selected'))
+    //     .to.equal('true', 'selected <coral-masonry-item> should have aria-selected="true" when selectionMode="multiple"');
+    //   expect(el.items.last().getAttribute('aria-selected'))
+    //     .to.equal('false', 'not selected <coral-masonry-item> should have aria-selected="false" when selectionMode="multiple"');
+    //
+    //   el.selectionMode = 'none';
+    //   expect(el.items.first().hasAttribute('aria-selected'))
+    //     .to.equal(false, 'selected <coral-masonry-item> should not have aria-selected when selectionMode="none"');
+    //   expect(el.items.last().hasAttribute('aria-selected'))
+    //     .to.equal(false, 'not selected <coral-masonry-item> should note have aria-selected="false" when selectionMode="none"');
+    // })
   });
 
   describe('Attach/Detach', function () {

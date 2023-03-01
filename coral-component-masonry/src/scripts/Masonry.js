@@ -598,11 +598,6 @@ const Masonry = Decorator(class extends BaseComponent(HTMLElement) {
     if (activateAriaGrid === ariaGrid.ON) {
       item.setAttribute('role', 'gridcell');
       item.setAttribute('aria-colindex', columnIndex);
-
-      // communicate aria-selected state of all cells
-      if (this.selectionMode !== selectionMode.NONE || this.parentElement.hasAttribute('aria-multiselectable')) {
-        item.setAttribute('aria-selected', item.selected);
-      }
     } else {
       item.removeAttribute('role');
       item.removeAttribute('aria-colindex');
